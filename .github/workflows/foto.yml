@@ -2,7 +2,7 @@ name: Scarica foto candidate
 on:
   push:
     branches: [foto-candidati]
-    paths: [_foto/elenco.txt]
+    paths: [_foto/ricerche.txt]
 permissions:
   contents: write
 jobs:
@@ -10,26 +10,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Scarica e verifica licenza
+      - name: Cerca su Openverse (solo CC0 e pubblico dominio) e scarica
         run: |
-          mkdir -p _foto/raw
-          : > _foto/esito.txt
-          while read -r id note; do
-            [ -z "$id" ] && continue
-            loc=$(curl -s -o /dev/null -w '%{redirect_url}' "https://unsplash.com/photos/$id/download")
-            page=$(curl -sL "https://unsplash.com/photos/$id")
-            autore=$(printf '%s' "$page" | grep -o '<meta property="og:title" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"$//')
-            plus=$(printf '%s' "$page" | grep -c 'plus.unsplash.com' || true)
-            case "$loc" in
-              https://images.unsplash.com/*)
-                url="${loc%%\?*}?w=1800&q=78&fm=jpg&fit=max"
-                curl -sL "$url" -o "_foto/raw/$id.jpg"
-                echo "OK	$id	$plus	$autore	$loc" >> _foto/esito.txt ;;
-              *) echo "NO	$id	$plus	$autore	$loc" >> _foto/esito.txt ;;
-            esac
-          done < _foto/elenco.txt
-          ls -la _foto/raw
+          rm -rf _foto/raw; mkdir -p _foto/raw
+          echo '[]' > _foto/metadati.json
+          UA="IMPartnersSito/1.0 (studioiempartners@gmail.com)"
+          while IFS='|' read -r tag query; do
+            [ -z "$tag" ] && continue
+            q=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$query")
+            curl -s -A "$UA" "https://api.openverse.org/v1/images/?q=$q&license=cc0,pdm&page_size=8&aspect_ratio=wide&size=large&mature=false" -o r.json
+            python3 - "$tag" <<'P'
+          import json,sys,subprocess,os
+          tag=sys.argv[1]
+          try: res=json.load(open('r.json')).get('results',[])
+          except Exception as e: res=[]; print('errore',e)
+          meta=json.load(open('_foto/metadati.json'))
+          for i,r in enumerate(res[:6]):
+              url=r.get('url'); 
+              if not url: continue
+              out=f"_foto/raw/{tag}-{i}.jpg"
+              rc=subprocess.run(['curl','-sL','-m','40','-A','IMPartnersSito/1.0','-o',out,url]).returncode
+              if rc or not os.path.exists(out) or os.path.getsize(out)<20000:
+                  if os.path.exists(out): os.remove(out)
+                  continue
+              meta.append({'file':out,'tag':tag,'title':r.get('title'),'creator':r.get('creator'),'license':r.get('license'),'license_url':r.get('license_url'),'source':r.get('foreign_landing_url'),'provider':r.get('provider'),'w':r.get('width'),'h':r.get('height')})
+          json.dump(meta,open('_foto/metadati.json','w'),indent=1,ensure_ascii=False)
+          P
+          done < _foto/ricerche.txt
+          rm -f r.json
+          sudo apt-get -qq install -y imagemagick >/dev/null 2>&1 || true
+          for f in _foto/raw/*.jpg; do mogrify -resize '1800x1800>' -quality 80 -strip "$f" || rm -f "$f"; done
+          ls -la _foto/raw | head -80
       - name: Salva
         run: |
           git config user.name "Claude"; git config user.email "noreply@anthropic.com"
-          git add _foto && git commit -m "Foto candidate scaricate" && git push
+          git add -A _foto && git commit -m "Foto candidate (Openverse, CC0/PD)" && git push
