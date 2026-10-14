@@ -5,7 +5,7 @@ Uso:  python3 _sorgenti/build.py
 Le pagine, il foglio di stile e la mappa del sito vengono riscritti a ogni esecuzione.
 novita.json non viene toccato: lo aggiorna l'attività programmata ogni mattina feriale.
 """
-import json, os, pathlib, datetime
+import json, os, pathlib, datetime, hashlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / '_sorgenti'
@@ -20,6 +20,10 @@ PIVA = '04942040611'
 SEDE = 'Via Filippo Saporito 58, 81031 Aversa (CE)'
 TODO_DEN = '<span class="todo">denominazione completa e forma giuridica</span>'
 TODO_TIT = '<span class="todo">denominazione e sede del titolare</span>'
+
+def ver(f):
+    p = ROOT / 'assets' / f
+    return hashlib.md5(p.read_bytes()).hexdigest()[:8] if p.exists() else '0'
 
 def tel(n):
     return 'tel:' + n.replace(' ', '')
@@ -260,7 +264,7 @@ def page(path, title, desc, body, *, lang='it', scripts=(), head_extra='', vetri
     if path in ('/', '/en/'):
         alt = f'<link rel="alternate" hreflang="it" href="{SITE}/"><link rel="alternate" hreflang="en" href="{SITE}/en/"><link rel="alternate" hreflang="x-default" href="{SITE}/">'
     rob = f'<meta name="robots" content="{robots}">' if robots else ''
-    js = ''.join(f'<script src="/assets/{s}" defer></script>' for s in ('site.js',) + tuple(scripts))
+    js = ''.join(f'<script src="/assets/{s}?v={ver(s)}" defer></script>' for s in ('site.js',) + tuple(scripts))
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
@@ -282,7 +286,7 @@ def page(path, title, desc, body, *, lang='it', scripts=(), head_extra='', vetri
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/favicon.png">
 {fonts}
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/style.css?v={{CSSV}}">
 {vscript}{head_extra}{js}
 </head>
 <body>
@@ -939,7 +943,10 @@ pages['/404.html'] = page('/404.html', 'Pagina non trovata · I&amp;M Partners',
 </div></section>''', robots='noindex')
 
 # ---------------------------------------------------------------- scrittura
+css = (SRC / 'fonts.css').read_text() + (SRC / 'base.css').read_text() + (SRC / 'extra.css').read_text()
+CSSV = hashlib.md5(css.encode()).hexdigest()[:8]
 for path, html in pages.items():
+    html = html.replace('{CSSV}', CSSV)
     out = ROOT / ('404.html' if path == '/404.html' else (path.strip('/') + '/index.html' if path != '/' else 'index.html'))
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding='utf-8')
