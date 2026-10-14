@@ -25,6 +25,16 @@ def ver(f):
     p = ROOT / 'assets' / f
     return hashlib.md5(p.read_bytes()).hexdigest()[:8] if p.exists() else '0'
 
+def img(nome, alt, cls='', sizes='100vw', eager=False):
+    load = 'eager' if eager else 'lazy'
+    from PIL import Image as _I
+    w, h = _I.open(ROOT / 'assets' / 'img' / f'{nome}-l.webp').size
+    return (f'<img class="{cls}" src="/assets/img/{nome}-l.webp" srcset="/assets/img/{nome}-800.webp 800w, /assets/img/{nome}-l.webp {w}w" '
+            f'sizes="{sizes}" width="{w}" height="{h}" alt="{alt}" loading="{load}" decoding="async">')
+
+def banner(nome, alt, eager=False):
+    return f'<section class="banner"><div class="wrap"><figure class="ph-img">{img(nome, alt, sizes="(min-width:1180px) 1180px, 100vw", eager=eager)}</figure></div></section>'
+
 def tel(n):
     return 'tel:' + n.replace(' ', '')
 
@@ -41,7 +51,7 @@ def icon(k):
 
 # ---------------------------------------------------------------- aree di attività
 AREE = [
- dict(slug='fiscale-tributario', icon='fiscale', nome='Fiscale e tributario',
+ dict(img='fiscale', img_alt='Volumi rilegati di una biblioteca giuridica', slug='fiscale-tributario', icon='fiscale', nome='Fiscale e tributario',
   breve="Dichiarazioni, imposte dirette e indirette, pianificazione e assistenza nei rapporti con l'Amministrazione finanziaria.",
   h1='Fiscale e tributario. <em>Prima, durante e dopo la dichiarazione.</em>',
   lead="Consulenza continuativa per società, imprese individuali, professionisti e persone fisiche: dalla pianificazione delle imposte agli adempimenti, fino all'assistenza quando l'Amministrazione finanziaria chiede chiarimenti.",
@@ -70,7 +80,7 @@ AREE = [
      'Per una prima stima è disponibile il <a href="/strumenti/#forfettario">simulatore del regime forfettario</a>.'],
     'Art. 1, commi 54-89, L. 190/2014'),
   ]),
- dict(slug='societario-operazioni-straordinarie', icon='societario', nome='Societario e operazioni straordinarie',
+ dict(img='societario', img_alt='Colonnato classico sotto un lucernario', slug='societario-operazioni-straordinarie', icon='societario', nome='Societario e operazioni straordinarie',
   breve='Costituzioni, riorganizzazioni, cessioni e acquisizioni d’azienda, valutazioni e due diligence.',
   h1='Società e operazioni straordinarie. <em>Le scelte che restano.</em>',
   lead="La forma giuridica, le regole tra soci, una cessione o una fusione producono effetti per anni. Le impostiamo valutando insieme gli aspetti civilistici, fiscali e contabili.",
@@ -97,7 +107,7 @@ AREE = [
      'Imposte, responsabilità per i debiti pregressi e tempi cambiano sensibilmente: la scelta va fatta dopo una verifica preliminare.'],
     'Artt. 2556-2560 c.c.'),
   ]),
- dict(slug='contabilita-bilanci', icon='contabilita', nome='Contabilità e bilanci',
+ dict(img='contabilita', img_alt='Calcolatrice su una scrivania', slug='contabilita-bilanci', icon='contabilita', nome='Contabilità e bilanci',
   breve='Tenuta delle scritture, bilancio d’esercizio, situazioni periodiche e controllo di gestione.',
   h1='Contabilità e bilanci. <em>Numeri per decidere.</em>',
   lead="Una contabilità tenuta con metodo non serve solo agli adempimenti: è lo strumento con cui l'imprenditore capisce dove sta andando. Per questo i dati arrivano anche durante l'anno, non solo a bilancio chiuso.",
@@ -118,7 +128,7 @@ AREE = [
     ["Sono bilanci intermedi, di solito trimestrali o semestrali, che mostrano ricavi, costi, margini e liquidità durante l'anno. Servono a correggere la rotta in tempo, a stimare le imposte prima degli acconti e a dialogare con le banche su dati aggiornati."],
     None),
   ]),
- dict(slug='internazionalizzazione-gestione-societaria', icon='internazionale', nome='Internazionalizzazione e gestione societaria',
+ dict(img='internazionale', img_alt='Dettaglio di un mappamondo antico', slug='internazionalizzazione-gestione-societaria', icon='internazionale', nome='Internazionalizzazione e gestione societaria',
   breve='Fiscalità internazionale, presenza all’estero, segreteria societaria e adempimenti degli organi sociali.',
   h1='Internazionalizzazione <em>e gestione societaria.</em>',
   lead="Per le imprese che vendono, acquistano o si insediano all'estero, per le persone che si trasferiscono, e per chi vuole una società sempre in regola con assemblee, libri sociali e Registro delle imprese.",
@@ -141,7 +151,7 @@ AREE = [
     ["Il regime per i lavoratori impatriati prevede, se ricorrono i requisiti di permanenza all'estero, di qualificazione e di residenza in Italia, che una parte del reddito di lavoro prodotto in Italia non concorra alla formazione del reddito imponibile, entro un limite annuo. Requisiti e misura vanno verificati prima del trasferimento."],
     'Art. 5 D.Lgs. 209/2023'),
   ]),
- dict(slug='crisi-sovraindebitamento', icon='crisi', nome='Crisi d’impresa e sovraindebitamento',
+ dict(img='crisi', img_alt='Statua della Giustizia con la bilancia', slug='crisi-sovraindebitamento', icon='crisi', nome='Crisi d’impresa e sovraindebitamento',
   breve='Prevenzione della crisi, composizione negoziata e procedure di sovraindebitamento per persone e piccole imprese.',
   h1='Crisi d’impresa e sovraindebitamento. <em>Affrontare i debiti con metodo.</em>',
   lead="Quando i debiti superano la capacità di pagarli, la legge offre strumenti per ristrutturarli o, in certi casi, per liberarsene. I professionisti dello studio sono iscritti al registro dei gestori della crisi da sovraindebitamento.",
@@ -325,11 +335,14 @@ CLOSING = '''<section class="sec">
 pages = {}
 
 def card(a):
-    return f'''<a class="card" href="/aree/{a['slug']}/">
+    return f'''<a class="card has-img" href="/aree/{a['slug']}/">
+          <figure class="ci">{img(a['img'], a['img_alt'], sizes="(min-width:900px) 560px, 100vw")}</figure>
+          <div class="cb">
           {icon(a['icon'])}
           <h3>{a['nome']}</h3>
           <p class="soft">{a['breve']}</p>
           <span class="more">Approfondisci <i>→</i></span>
+          </div>
         </a>'''
 
 # --- home
@@ -410,7 +423,8 @@ home = f'''
   </div>
 </section>
 
-<section class="sec band">
+<section class="sec band photo">
+  {img('aversa-vesuvio', '', cls='bg')}
   <div class="wrap">
     <p class="quote wide">Radicati ad Aversa, al fianco di imprese che guardano <em>oltre i confini.</em></p>
   </div>
@@ -507,6 +521,7 @@ studio = f'''
     <p class="soft" style="max-width:62ch">Per questo abbiamo scelto una dimensione raccolta. Ogni cliente ha un professionista di riferimento, che conosce la sua storia, segue la pratica dall'inizio alla fine e risponde in prima persona. Fisco, società e bilanci vengono letti insieme, perché insieme producono i loro effetti.</p>
   </div>
 </section>
+{banner('studio', 'Penna stilografica su una lettera scritta a mano', eager=True)}
 <section class="sec band">
   <div class="wrap"><p class="quote">Dietro ogni bilancio c'è una storia d'impresa. Il nostro lavoro comincia da lì, <em>prima dei numeri.</em></p></div>
 </section>
@@ -587,6 +602,7 @@ for a in AREE:
     <div class="row"><a class="cta" href="/contatti/?area={a['slug']}#scrivici">Richiedi un incontro</a><a class="cta ghost" href="#domande">Domande frequenti</a></div>
   </div>
 </section>
+{banner(a['img'], a['img_alt'], eager=True)}
 <section class="sec">
   <div class="wrap stack" style="gap:40px">
     <div class="stack"><p class="label">Cosa facciamo</p><h2>Le attività <em>dell'area.</em></h2></div>
@@ -631,6 +647,7 @@ profs = f'''
     <h1>Iorio <em>&amp;</em> Mollichella.</h1>
     <p class="lead">Due dottori commercialisti iscritti all'Ordine di Napoli Nord. Ogni cliente ha uno dei due come professionista di riferimento, che segue personalmente la pratica.</p>
   </div>
+  <div class="wrap" style="margin-top:48px"><figure class="ph-img">{img('biblioteca', 'Scaffali di una biblioteca con volumi antichi', sizes="(min-width:1180px) 1180px, 100vw", eager=True)}</figure></div>
   <div class="wrap" style="margin-top:56px">
     {prof('iorio', 'I', 'Dott. Salvatore Iorio', '1849A')}
     {prof('mollichella', 'M', 'Dott. Nazareno Mollichella', '1860A')}
@@ -663,6 +680,7 @@ scad = f'''
     <p class="note">Calendario ordinario delle scadenze ricorrenti. I termini che cadono di sabato o in un giorno festivo sono riportati al primo giorno lavorativo successivo (art. 7, co. 1, lett. h, D.L. 70/2011); quelli compresi tra il 1° e il 20 agosto sono riportati al 20 agosto (art. 37, co. 11-bis, D.L. 223/2006). Il calendario non tiene conto di proroghe, festività locali e termini particolari: fa fede lo <a href="https://www1.agenziaentrate.gov.it/servizi/scadenzario/main.php" target="_blank" rel="noopener">scadenzario dell'Agenzia delle Entrate</a>.</p>
   </div>
 </section>
+{banner('calcolatrice', 'Calcolatrice e grafici su una scrivania')}
 <section class="sec" id="novita">
   <div class="wrap split">
     <div class="stack">
@@ -789,6 +807,7 @@ cont = f'''
   </div>
 </section>
 
+{banner('penna', 'Penna stilografica su un piano di legno')}
 <section class="sec" id="scrivici">
   <div class="wrap split">
     <div class="stack">
@@ -871,6 +890,9 @@ legal = f'''
 
     <h3>Contenuti del sito</h3>
     <p>Le informazioni pubblicate, comprese scadenze, novità e calcolatori, hanno carattere generale e informativo, sono aggiornate alla data indicata e non costituiscono consulenza professionale. Il calendario delle scadenze non tiene conto di proroghe e termini particolari.</p>
+
+    <h3>Immagini</h3>
+    <p>Le fotografie del sito sono opere rilasciate in pubblico dominio con licenza CC0 1.0 (rawpixel.com e StockSnap.io). Il dipinto della pagina iniziale raffigura il golfo di Napoli con il Vesuvio ed è un'opera di pubblico dominio.</p>
 
     <h3 id="privacy">Informativa sul trattamento dei dati personali</h3>
     <p>Informativa resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679.</p>
