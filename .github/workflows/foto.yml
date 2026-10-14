@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Cerca su Openverse (solo CC0 e pubblico dominio) e scarica
         run: |
-          rm -rf _foto/raw; mkdir -p _foto/raw
-          echo '[]' > _foto/metadati.json
+          mkdir -p _foto/raw
+          [ -f _foto/metadati.json ] || echo '[]' > _foto/metadati.json
           UA="IMPartnersSito/1.0 (studioiempartners@gmail.com)"
           while IFS='|' read -r tag query; do
             [ -z "$tag" ] && continue

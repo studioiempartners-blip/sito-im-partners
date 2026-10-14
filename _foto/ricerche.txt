@@ -1,15 +1,4 @@
-penna|fountain pen paper
-penna2|fountain pen writing desk
-colonne|classical columns
-colonne2|neoclassical colonnade
-globo|antique globe
-mappa|old world map
-clessidra|hourglass
-libri|law books library
-libri2|old books shelf
-registro|old ledger handwriting
-aversa|Aversa cathedral
-caserta|Reggia di Caserta
-napoli|Naples gulf Vesuvius
-scrivania|office desk documents
-calcolatrice|calculator accounting
+bilancia|brass balance scale
+bilancia2|scales of justice
+scala|marble staircase
+studio|dark wood office interior
