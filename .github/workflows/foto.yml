@@ -1,0 +1,35 @@
+name: Scarica foto candidate
+on:
+  push:
+    branches: [foto-candidati]
+    paths: [_foto/elenco.txt]
+permissions:
+  contents: write
+jobs:
+  scarica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica e verifica licenza
+        run: |
+          mkdir -p _foto/raw
+          : > _foto/esito.txt
+          while read -r id note; do
+            [ -z "$id" ] && continue
+            loc=$(curl -s -o /dev/null -w '%{redirect_url}' "https://unsplash.com/photos/$id/download")
+            page=$(curl -sL "https://unsplash.com/photos/$id")
+            autore=$(printf '%s' "$page" | grep -o '<meta property="og:title" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"$//')
+            plus=$(printf '%s' "$page" | grep -c 'plus.unsplash.com' || true)
+            case "$loc" in
+              https://images.unsplash.com/*)
+                url="${loc%%\?*}?w=1800&q=78&fm=jpg&fit=max"
+                curl -sL "$url" -o "_foto/raw/$id.jpg"
+                echo "OK	$id	$plus	$autore	$loc" >> _foto/esito.txt ;;
+              *) echo "NO	$id	$plus	$autore	$loc" >> _foto/esito.txt ;;
+            esac
+          done < _foto/elenco.txt
+          ls -la _foto/raw
+      - name: Salva
+        run: |
+          git config user.name "Claude"; git config user.email "noreply@anthropic.com"
+          git add _foto && git commit -m "Foto candidate scaricate" && git push
