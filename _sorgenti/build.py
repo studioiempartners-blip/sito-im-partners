@@ -451,7 +451,7 @@ home = f'''
       <p class="label">Per chi lavoriamo</p>
       <h2>Imprese, professionisti, <em>persone.</em></h2>
     </div>
-    <figure class="ph-img">{img('clienti', 'Professionisti a confronto attorno a un tavolo di lavoro', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
+    <figure class="ph-img">{img('lavoro', 'Appunti e portatile su un tavolo di lavoro durante un incontro', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
     <div class="grid4">
       {''.join(f'<article class="pr"><h3>{t}</h3><p class="soft">{x}</p></article>' for t, x in PER_CHI)}
     </div>
@@ -543,7 +543,7 @@ studio = f'''
 <section class="sec">
   <div class="wrap stack" style="gap:40px">
     <div class="stack"><p class="label">A chi ci rivolgiamo</p><h2>Imprese, professionisti, <em>persone.</em></h2></div>
-    <figure class="ph-img">{img('consulenza', 'Riunione di lavoro con clienti in ufficio', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
+    <figure class="ph-img">{img('sala', 'Sala riunioni con tavolo e sedute', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
     <div class="grid4">
       {''.join(f'<article class="pr"><h3>{t}</h3><p class="soft">{x}</p></article>' for t, x in PER_CHI)}
     </div>
@@ -932,7 +932,7 @@ en = f'''
     <div class="row"><a class="cta" href="mailto:{MAIL}?subject=Enquiry">Write to us</a><a class="cta ghost" href="{tel(TEL1)}">Call {TEL1}</a></div>
   </div>
 </section>
-{banner('clienti', 'Advisors meeting around a table', eager=True)}
+{banner('lavoro', 'Notes and a laptop on a meeting table', eager=True)}
 <section class="sec">
   <div class="wrap stack" style="gap:40px">
     <div class="stack"><p class="label">Practice areas</p><h2>How we can <em>help.</em></h2></div>
