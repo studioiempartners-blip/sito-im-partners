@@ -65,9 +65,12 @@
       <h2>Inviaci <em>un messaggio.</em></h2>
       <p class="soft">Rispondiamo di norma entro due giorni lavorativi. Per questioni con scadenze ravvicinate è preferibile telefonare.</p>
     </div>
-    <form class="form" id="modulo" name="contatti" method="POST" action="/grazie/" data-netlify="true" netlify-honeypot="sito-web">
-      <input type="hidden" name="form-name" value="contatti">
-      <p class="hp"><label>Non compilare questo campo <input name="sito-web" tabindex="-1" autocomplete="off"></label></p>
+    <form class="form" id="modulo" name="contatti" method="POST" action="https://api.web3forms.com/submit">
+      <input type="hidden" name="access_key" value="26752f22-884a-4b22-976e-b9f31f8bffcb">
+      <input type="hidden" name="subject" value="Nuovo messaggio dal sito studioiempartners.it">
+      <input type="hidden" name="from_name" value="Sito I&amp;M Partners">
+      <input type="hidden" name="redirect" value="https://studioiempartners.it/grazie/">
+      <p class="hp"><label>Non compilare questo campo <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
       <label for="m-nome">Nome e cognome</label>
       <input id="m-nome" name="nome" type="text" autocomplete="name" required>
       <label for="m-mail">E-mail</label>

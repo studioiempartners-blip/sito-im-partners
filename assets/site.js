@@ -74,8 +74,12 @@
       if(!f.checkValidity()) return;
       e.preventDefault();
       btn.disabled=true;dici('Invio in corso…');
-      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-        .then(function(r){if(!r.ok) throw r;location.href='/grazie/';})
+      var dati={};new FormData(f).forEach(function(v,k){dati[k]=v;});
+      if(dati.botcheck){location.href='/grazie/';return;}
+      delete dati.botcheck;delete dati.redirect;
+      if(dati.email) dati.replyto=dati.email;
+      fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dati)})
+        .then(function(r){return r.json().then(function(j){if(!r.ok||!j.success) throw j;location.href='/grazie/';});})
         .catch(function(){
           /* invio online non riuscito: si apre il programma di posta con il messaggio già scritto */
           btn.disabled=false;

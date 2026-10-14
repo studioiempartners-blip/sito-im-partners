@@ -792,9 +792,12 @@ cont = f'''
       <h2>Inviaci <em>un messaggio.</em></h2>
       <p class="soft">Rispondiamo di norma entro due giorni lavorativi. Per questioni con scadenze ravvicinate è preferibile telefonare.</p>
     </div>
-    <form class="form" id="modulo" name="contatti" method="POST" action="/grazie/" data-netlify="true" netlify-honeypot="sito-web">
-      <input type="hidden" name="form-name" value="contatti">
-      <p class="hp"><label>Non compilare questo campo <input name="sito-web" tabindex="-1" autocomplete="off"></label></p>
+    <form class="form" id="modulo" name="contatti" method="POST" action="https://api.web3forms.com/submit">
+      <input type="hidden" name="access_key" value="26752f22-884a-4b22-976e-b9f31f8bffcb">
+      <input type="hidden" name="subject" value="Nuovo messaggio dal sito studioiempartners.it">
+      <input type="hidden" name="from_name" value="Sito I&amp;M Partners">
+      <input type="hidden" name="redirect" value="https://studioiempartners.it/grazie/">
+      <p class="hp"><label>Non compilare questo campo <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></p>
       <label for="m-nome">Nome e cognome</label>
       <input id="m-nome" name="nome" type="text" autocomplete="name" required>
       <label for="m-mail">E-mail</label>
@@ -872,8 +875,8 @@ legal = f'''
       <li><strong>Dati trattati:</strong> dati di navigazione necessari al funzionamento del sito; dati che l'utente comunica spontaneamente con il modulo di contatto (nome, e-mail, telefono, argomento e messaggio), per e-mail o per telefono.</li>
       <li><strong>Finalità e base giuridica:</strong> riscontro alle richieste dell'utente ed esecuzione di misure precontrattuali (art. 6, par. 1, lett. b); sicurezza e funzionamento del sito (art. 6, par. 1, lett. f).</li>
       <li><strong>Conferimento:</strong> facoltativo; senza nome, e-mail e messaggio non è possibile rispondere alla richiesta.</li>
-      <li><strong>Conservazione:</strong> per il tempo necessario a dare riscontro alla richiesta e, in caso di conferimento dell'incarico, per i termini previsti dalla legge. I messaggi inviati con il modulo sono cancellati dal servizio di raccolta entro dodici mesi.</li>
-      <li><strong>Destinatari:</strong> fornitori dei servizi tecnici del sito, nominati responsabili del trattamento ai sensi dell'art. 28, tra cui Netlify, Inc. (Stati Uniti), che ospita il sito e raccoglie i messaggi del modulo di contatto, e GitHub, Inc. (Stati Uniti), che conserva il codice del sito. L'eventuale trasferimento di dati verso Paesi terzi avviene con le garanzie previste dal Capo V del Regolamento.</li>
+      <li><strong>Conservazione:</strong> per il tempo necessario a dare riscontro alla richiesta e, in caso di conferimento dell'incarico, per i termini previsti dalla legge.</li>
+      <li><strong>Destinatari:</strong> fornitori dei servizi tecnici del sito, nominati responsabili del trattamento ai sensi dell'art. 28, tra cui Netlify, Inc. (Stati Uniti), che ospita il sito, GitHub, Inc. (Stati Uniti), che conserva il codice del sito, e il servizio Web3Forms, che inoltra all'indirizzo e-mail dello studio i messaggi inviati con il modulo di contatto. L'eventuale trasferimento di dati verso Paesi terzi avviene con le garanzie previste dal Capo V del Regolamento.</li>
       <li><strong>Diritti dell'interessato:</strong> accesso, rettifica, cancellazione, limitazione, portabilità e opposizione (artt. 15-22), oltre al reclamo al Garante per la protezione dei dati personali (art. 77).</li>
     </ul>
 
