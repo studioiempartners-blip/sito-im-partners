@@ -1,4 +1,12 @@
-bilancia|brass balance scale
-bilancia2|scales of justice
-scala|marble staircase
-studio|dark wood office interior
+riunione|business meeting office table
+riunione2|client meeting consultant
+riunione3|team meeting discussion office
+firma|signing contract document
+stretta|handshake business
+documenti|financial documents
+fattura|invoice paperwork
+tasse|tax forms
+grafici|financial charts report
+laptop|laptop spreadsheet finance
+consulenza|financial advisor
+ufficio|modern office interior
