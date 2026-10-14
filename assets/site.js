@@ -76,7 +76,19 @@
       btn.disabled=true;dici('Invio in corso…');
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
         .then(function(r){if(!r.ok) throw r;location.href='/grazie/';})
-        .catch(function(){btn.disabled=false;dici('Il messaggio non è stato inviato. Riprova tra poco oppure scrivi a studioiempartners@gmail.com.');});
+        .catch(function(){
+          /* invio online non riuscito: si apre il programma di posta con il messaggio già scritto */
+          btn.disabled=false;
+          var v=function(n){var el=f.elements[n];return el?String(el.value||'').trim():'';};
+          var arg=f.elements.argomento,argT=arg&&arg.selectedIndex>0?arg.options[arg.selectedIndex].text:'';
+          var corpo=v('messaggio')+'\n\n'+v('nome')+'\n'+v('email')+(v('telefono')?'\n'+v('telefono'):'');
+          var href='mailto:studioiempartners@gmail.com?subject='+encodeURIComponent('Richiesta dal sito'+(argT?' · '+argT:''))+'&body='+encodeURIComponent(corpo);
+          st.hidden=false;st.textContent='';
+          st.appendChild(doc.createTextNode('L’invio dal sito non è riuscito. Puoi spedire lo stesso messaggio con il tuo programma di posta: '));
+          var a=doc.createElement('a');a.href=href;a.textContent='apri l’e-mail già compilata';st.appendChild(a);
+          st.appendChild(doc.createTextNode(', oppure scrivi a studioiempartners@gmail.com.'));
+          location.href=href;
+        });
     });
   }
 })();
