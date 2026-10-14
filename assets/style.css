@@ -459,7 +459,7 @@ main > section:first-child,.page > section:first-child{padding-top:clamp(40px,7v
 .v-on body{overflow:hidden}
 
 /* parole lunghe nei titoli su schermi stretti */
-h1,h2,.hx{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+@media (max-width:520px){h1,h2,.hx{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 
 /* griglie con numero dispari di elementi */
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:40px 48px}
@@ -488,3 +488,6 @@ figure{margin:0}
   .cards > .card.has-img:last-child:nth-child(odd) .ci{flex:0 0 50%;aspect-ratio:auto}
 }
 .banner:has(+ .band){padding-bottom:clamp(48px,7vw,96px)}
+.closing-split{align-items:center}
+.closing-split .closing{gap:26px}
+.closing-split .ph-img img{aspect-ratio:4/3;object-fit:cover}

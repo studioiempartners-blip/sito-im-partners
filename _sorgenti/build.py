@@ -323,13 +323,16 @@ def faq_ld(faq):
     return ld({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
         {'@type': 'Question', 'name': strip(q), 'acceptedAnswer': {'@type': 'Answer', 'text': strip(' '.join(a))}} for q, a, _ in faq]})
 
-CLOSING = '''<section class="sec">
-  <div class="wrap closing">
-    <h2>Il primo passo è <em>una conversazione.</em></h2>
-    <p class="soft">Lo studio riceve solo su appuntamento, in via Filippo Saporito 58 ad Aversa. Scrivici o telefona per fissare un incontro.</p>
-    <div class="row"><a class="cta" href="/contatti/">Richiedi un incontro</a><a class="cta ghost" href="{tel}">Chiama lo studio</a></div>
+CLOSING = ('''<section class="sec">
+  <div class="wrap split even closing-split">
+    <div class="closing">
+      <h2>Il primo passo è <em>una conversazione.</em></h2>
+      <p class="soft">Lo studio riceve solo su appuntamento, in via Filippo Saporito 58 ad Aversa. Scrivici o telefona per fissare un incontro.</p>
+      <div class="row"><a class="cta" href="/contatti/">Richiedi un incontro</a><a class="cta ghost" href="{tel}">Chiama lo studio</a></div>
+    </div>
+    <figure class="ph-img">{IMG}</figure>
   </div>
-</section>'''.replace('{tel}', tel(TEL1))
+</section>'''.replace('{tel}', tel(TEL1)).replace('{IMG}', img('tavolo', 'Un incontro di lavoro attorno a un tavolo, con appunti e un tablet', sizes="(min-width:900px) 560px, 100vw")))
 
 # ---------------------------------------------------------------- pagine
 pages = {}
@@ -424,7 +427,7 @@ home = f'''
 </section>
 
 <section class="sec band photo">
-  {img('aversa-vesuvio', '', cls='bg')}
+  {img('incontro', '', cls='bg')}
   <div class="wrap">
     <p class="quote wide">Radicati ad Aversa, al fianco di imprese che guardano <em>oltre i confini.</em></p>
   </div>
@@ -448,6 +451,7 @@ home = f'''
       <p class="label">Per chi lavoriamo</p>
       <h2>Imprese, professionisti, <em>persone.</em></h2>
     </div>
+    <figure class="ph-img">{img('clienti', 'Professionisti a confronto attorno a un tavolo di lavoro', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
     <div class="grid4">
       {''.join(f'<article class="pr"><h3>{t}</h3><p class="soft">{x}</p></article>' for t, x in PER_CHI)}
     </div>
@@ -539,6 +543,7 @@ studio = f'''
 <section class="sec">
   <div class="wrap stack" style="gap:40px">
     <div class="stack"><p class="label">A chi ci rivolgiamo</p><h2>Imprese, professionisti, <em>persone.</em></h2></div>
+    <figure class="ph-img">{img('consulenza', 'Riunione di lavoro con clienti in ufficio', sizes="(min-width:1180px) 1180px, 100vw")}</figure>
     <div class="grid4">
       {''.join(f'<article class="pr"><h3>{t}</h3><p class="soft">{x}</p></article>' for t, x in PER_CHI)}
     </div>
@@ -546,7 +551,7 @@ studio = f'''
 </section>
 <section class="sec">
   <div class="wrap split">
-    <div class="stack"><p class="label">Il percorso</p><h2>Dal primo incontro <em>all'affiancamento.</em></h2></div>
+    <div class="stack"><p class="label">Il percorso</p><h2>Dal primo incontro <em>all'affiancamento.</em></h2><figure class="ph-img" style="margin-top:12px">{img('firma', "Firma di un documento al tavolo dello studio", sizes="(min-width:900px) 420px, 100vw")}</figure></div>
     <ol class="steps">
       <li><span class="n" aria-hidden="true">1</span><div class="stack" style="gap:8px"><h3>Primo incontro</h3><p class="soft">Su appuntamento, nella sede di Aversa. Raccogliamo documenti, domande e obiettivi.</p></div></li>
       <li><span class="n" aria-hidden="true">2</span><div class="stack" style="gap:8px"><h3>Analisi</h3><p class="soft">Esaminiamo la posizione fiscale, societaria e contabile e indichiamo criticità e possibili interventi.</p></div></li>
@@ -720,6 +725,7 @@ strum = f'''
     <p class="lead">Calcolatori per una prima stima. I valori inseriti restano nel tuo browser: non vengono inviati né conservati.</p>
   </div>
 </section>
+{banner('scrivania', 'Scrivania con documenti contabili, calcolatrice e caffè', eager=True)}
 
 <section class="sec" id="irpef">
   <div class="wrap stack" style="gap:30px">
@@ -807,7 +813,7 @@ cont = f'''
   </div>
 </section>
 
-{banner('penna', 'Penna stilografica su un piano di legno')}
+{banner('riunione', 'Appunti presi durante un incontro di lavoro')}
 <section class="sec" id="scrivici">
   <div class="wrap split">
     <div class="stack">
@@ -892,7 +898,7 @@ legal = f'''
     <p>Le informazioni pubblicate, comprese scadenze, novità e calcolatori, hanno carattere generale e informativo, sono aggiornate alla data indicata e non costituiscono consulenza professionale. Il calendario delle scadenze non tiene conto di proroghe e termini particolari.</p>
 
     <h3>Immagini</h3>
-    <p>Le fotografie del sito sono opere rilasciate in pubblico dominio con licenza CC0 1.0 (rawpixel.com e StockSnap.io). Il dipinto della pagina iniziale raffigura il golfo di Napoli con il Vesuvio ed è un'opera di pubblico dominio.</p>
+    <p>Le fotografie del sito sono opere rilasciate in pubblico dominio con licenza CC0 1.0 (rawpixel.com, StockSnap.io e Wikimedia Commons).</p>
 
     <h3 id="privacy">Informativa sul trattamento dei dati personali</h3>
     <p>Informativa resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679.</p>
@@ -926,6 +932,7 @@ en = f'''
     <div class="row"><a class="cta" href="mailto:{MAIL}?subject=Enquiry">Write to us</a><a class="cta ghost" href="{tel(TEL1)}">Call {TEL1}</a></div>
   </div>
 </section>
+{banner('clienti', 'Advisors meeting around a table', eager=True)}
 <section class="sec">
   <div class="wrap stack" style="gap:40px">
     <div class="stack"><p class="label">Practice areas</p><h2>How we can <em>help.</em></h2></div>
