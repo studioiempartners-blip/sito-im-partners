@@ -1,29 +1,4 @@
-[
-  {
-    "data": "2026-10-13",
-    "tema": "Prassi",
-    "titolo": "Sister, dal 15 novembre stop alle credenziali: accesso con SPID, CIE e CNS (provv. 278149)",
-    "sintesi": "Con il provvedimento n. 278149 del 13 ottobre 2026 l'Agenzia delle Entrate dispone che dal 15 novembre 2026 non saranno più rilasciate le credenziali Sister per i servizi telematici ipotecari e catastali. Le credenziali esistenti saranno disattivate progressivamente entro il 31 dicembre 2026, secondo un calendario pubblicato sul sito dell'Agenzia, e l'accesso avverrà tramite SPID, CIE, CNS o, ove previste, credenziali Fisconline/Entratel.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127570_graduale_passaggio_dalle_vecchie_password_a_spid_e_cie_per_sister.aspx"
-  },
-  {
-    "data": "2026-10-13",
-    "tema": "Lavoro e previdenza",
-    "titolo": "INPS, messaggio n. 3247: nuovo servizio unico per il rimborso dei contributi indebiti",
-    "sintesi": "Con il messaggio n. 3247 del 13 ottobre 2026 l'INPS ha reso disponibile un'applicazione online che costituisce un punto di accesso unico per le domande di rimborso dei contributi versati indebitamente. Il servizio riguarda inizialmente la Gestione separata e sarà successivamente esteso a tutte le gestioni dell'Istituto.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127642_operativo_il_nuovo_servizio_dell_inps_per_il_rimborso_degli_indebiti.aspx"
-  },
-  {
-    "data": "2026-10-13",
-    "tema": "Lavoro e previdenza",
-    "titolo": "INPS, messaggio n. 3245: dal 15 ottobre richieste di aliquota più elevata per il 2027",
-    "sintesi": "Con il messaggio n. 3245 del 13 ottobre 2026 l'INPS comunica che dal 15 ottobre 2026 i beneficiari di prestazioni previdenziali e pensionistiche possono chiedere, per il periodo d'imposta 2027, l'applicazione dell'aliquota più elevata o il mancato riconoscimento, totale o parziale, delle detrazioni per reddito. La richiesta si presenta online con il servizio \"Dichiarazione per il diritto alle detrazioni d'imposta per reddito e per carichi di famiglia\".",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127611_da_domani_possibile_richiedere_l_aliquota_piu_elevata_sulle_pensioni.aspx"
-  },
-  {
+{
     "data": "2026-10-12",
     "tema": "Giurisprudenza",
     "titolo": "Cassazione n. 26690/2026: ipoteca su fondo patrimoniale per sanzioni Consob e Banca d'Italia",
