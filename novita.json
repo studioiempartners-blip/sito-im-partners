@@ -1,49 +1,98 @@
-{
-    "data": "2026-10-12",
-    "tema": "Giurisprudenza",
-    "titolo": "Cassazione n. 26690/2026: ipoteca su fondo patrimoniale per sanzioni Consob e Banca d'Italia",
-    "sintesi": "Con la sentenza n. 26690/2026, depositata il 12 ottobre, la Corte di Cassazione si è pronunciata sull'ipoteca esattoriale ex art. 77 del DPR 602/73 iscritta su un immobile in fondo patrimoniale a garanzia di sanzioni Consob e Banca d'Italia. Secondo la Corte, le sanzioni per illeciti commessi nell'esercizio di funzioni apicali sono debiti inerenti ai bisogni familiari se la remunerazione costituisce il reddito primario del nucleo.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127465_ipoteca_sul_fondo_patrimoniale_per_le_sanzioni_di_consob_e_banca.aspx"
-  },
+[
   {
-    "data": "2026-10-12",
-    "tema": "Prassi",
-    "titolo": "Partite IVA inattive: aggiornati i criteri di chiusura d'ufficio (provv. n. 277710/2026)",
-    "sintesi": "Con il provvedimento n. 277710/2026 l'Agenzia delle Entrate ha aggiornato i criteri e le modalità di chiusura d'ufficio delle partite IVA inattive, modificando il precedente provvedimento in materia. Ai fini della chiusura assume rilievo l'incrocio dei dati di fatture elettroniche, corrispettivi telematici e versamenti spontanei.",
-    "fonte": "Il Sole 24 Ore",
-    "url": "https://ntplusfisco.ilsole24ore.com/art/partite-iva-inattive-l-incrocio-le-e-fatture-determina-chiusura-AJcHXihB"
-  },
-  {
-    "data": "2026-10-10",
+    "data": "2026-10-16",
     "tema": "Scadenze",
-    "titolo": "Credito d'imposta per l'assunzione di detenuti: istanze per il 2027 entro il 31 ottobre",
-    "sintesi": "Le aziende convenzionate con gli istituti penitenziari devono presentare entro il 31 ottobre alla direzione dell'istituto l'istanza con l'ammontare del credito d'imposta di cui intendono fruire per il 2027 (L. 193/2000 e DM 148/2014). Le istanze sono poi trasmesse ai provveditorati regionali e da questi al Dipartimento dell'amministrazione penitenziaria entro il 15 novembre, secondo la circolare del Ministero della Giustizia del 5 marzo 2026.",
+    "titolo": "Rottamazione-quinquies enti territoriali: domande dal 16 ottobre al 15 dicembre 2026",
+    "sintesi": "Dal 16 ottobre al 15 dicembre 2026 è possibile presentare la domanda per la rottamazione-quinquies riservata ai carichi degli enti territoriali, prevista dall'art. 1, commi 82-100, della L. 199/2025. L'Agenzia delle Entrate-Riscossione ha pubblicato sul proprio sito le modalità di presentazione e le relative FAQ.",
     "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127238_entro_il_31_ottobre_istanze_per_il_tax_credit_assunzione_detenuti.aspx"
+    "url": "https://www.eutekne.info/Sezioni/Art_1125014_domanda_per_la_rottamazione_riservata_agli_enti_locali_da_oggi.aspx"
   },
   {
-    "data": "2026-10-09",
-    "tema": "Giurisprudenza",
-    "titolo": "Corte costituzionale, sentenza n. 164/2026: illegittima la legge E-R sulle locazioni brevi",
-    "sintesi": "Con la sentenza n. 164 del 9 ottobre 2026 la Corte costituzionale ha dichiarato illegittimi, per violazione degli artt. 3 e 41 della Costituzione, gli artt. 4 e 5 della legge della Regione Emilia-Romagna n. 10/2025 sugli immobili destinati a locazione breve. Secondo la Corte, la limitazione prevista è sproporzionata perché opera sull'intero territorio regionale e crea una disparità di trattamento rispetto alle strutture ricettive extra-alberghiere.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Art_1127213_incostituzionale_la_norma_regionale_che_limita_le_locazioni_brevi.aspx"
-  },
-  {
-    "data": "2026-10-06",
-    "tema": "Prassi",
-    "titolo": "Concordato preventivo biennale: pubblicata la circolare n. 8/E",
-    "sintesi": "L'Agenzia delle Entrate ha pubblicato la circolare n. 8/E del 6 ottobre 2026 sulla disciplina del concordato preventivo biennale (D.Lgs. 13/2024). Il comunicato dell'Agenzia indica il 2 novembre come termine di adesione per il biennio 2026-2027.",
-    "fonte": "Agenzia delle Entrate",
-    "url": "https://www.agenziaentrate.gov.it/portale/cs-6-ottobre-2026"
-  },
-  {
-    "data": "2026-10-05",
+    "data": "2026-10-15",
     "tema": "Lavoro e previdenza",
-    "titolo": "INPS, messaggio n. 3145: limiti dimensionali delle imprese artigiane edili",
-    "sintesi": "Con il messaggio n. 3145 del 5 ottobre 2026 l'INPS fornisce chiarimenti sui limiti dimensionali per le imprese artigiane dell'edilizia e sull'attribuzione del codice di autorizzazione \"5G\". Il messaggio tratta anche l'iscrizione di più matricole in capo allo stesso datore di lavoro artigiano.",
-    "fonte": "INPS",
-    "url": "https://www.inps.it/it/it/inps-comunica/atti/circolari-messaggi-e-normativa/dettaglio.circolari-e-messaggi.2026.10.messaggio-numero-3145-del-05-10-2026_16385.html"
+    "titolo": "Previdenza complementare: annunciati due simulatori per lavoratori e imprese",
+    "sintesi": "Con un comunicato stampa il Ministero del Lavoro ha annunciato il rilascio di due simulatori online legati al meccanismo di adesione automatica alla previdenza complementare introdotto dall'art. 1, comma 204, della L. 199/2025. Il primo stima la pensione futura dei lavoratori, il secondo i vantaggi fiscali e contributivi per i datori di lavoro che destinano il TFR ai fondi pensione; le elaborazioni non hanno valore certificativo.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127779_disponibili_due_nuovi_simulatori_per_la_previdenza_complementare.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 183/2026: agevolazioni PPC e terreni montani salve con la fusione",
+    "sintesi": "Con la risposta a interpello n. 183/2026 l'Agenzia delle Entrate si pronuncia sulle agevolazioni in materia di imposte indirette per la piccola proprietà contadina e per i terreni montani in caso di fusione per incorporazione della società acquirente. Secondo l'Agenzia la fusione costituisce un passaggio in continuità e non determina la decadenza, purché l'incorporante prosegua la coltivazione dei terreni per il periodo residuo.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127869_la_fusione_per_incorporazione_non_fa_perdere_le_agevolazioni_per.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 182/2026: cessione di crediti con ipoteca volontaria e imposta ipotecaria",
+    "sintesi": "Con la risposta a interpello n. 182, pubblicata il 15 ottobre 2026, l'Agenzia delle Entrate esamina la cessione pro solvendo di crediti assistiti da ipoteca volontaria a garanzia del rimborso di un finanziamento. La cessione è esente da imposta ipotecaria se il finanziamento sottostante è soggetto all'imposta sostitutiva sui mutui.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127856_cessione_dei_crediti_assistiti_da_ipoteca_volontaria_esente_da.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Giurisprudenza",
+    "titolo": "Cassazione SU n. 26806/2026: sequestro di società e anticipazione erariale",
+    "sintesi": "Con la sentenza n. 26806/2026 le Sezioni Unite della Corte di Cassazione si sono pronunciate sul sequestro di società nelle misure di prevenzione del Codice antimafia (D.Lgs. 159/2011), distinguendo tra sequestro delle partecipazioni, dei beni aziendali e sequestro totalitario. La Corte precisa che l'amministratore giudiziario, se necessita di un'anticipazione a carico dell'Erario, deve chiedere una specifica autorizzazione al giudice.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127792_anticipazione_erariale_per_gestire_beni_aziendali_sequestrati.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Lavoro e previdenza",
+    "titolo": "INPS, messaggio n. 3281: redditi autonomi 2025 dei pensionati entro il 2 novembre",
+    "sintesi": "Con il messaggio n. 3281, pubblicato il 15 ottobre 2026, l'INPS ricorda che i pensionati soggetti al regime di incumulabilità parziale del D.Lgs. 503/1992 devono comunicare entro il 2 novembre i redditi da lavoro autonomo percepiti nel 2025. Nella stessa occasione va inviata la dichiarazione preventiva dei redditi per l'anno 2026.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127930_redditi_da_lavoro_autonomo_2025_dei_pensionati_da_comunicare_entro.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 184/2026: sostitutiva del 7% anche per l'erede di pensione estera",
+    "sintesi": "Con la risposta a interpello n. 184/2026 l'Agenzia delle Entrate si è pronunciata per la prima volta sull'accesso dell'erede al regime di imposizione sostitutiva del 7% previsto dall'art. 24-ter del TUIR per i titolari di redditi da pensione di fonte estera. Nel caso di un piano pensionistico statunitense ereditato, l'Agenzia riconosce l'agevolazione anche se l'erede è subentrato nella titolarità del trattamento pensionistico.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127926_beneficia_della_sostitutiva_del_7_l_erede_del_titolare_di_pensione.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Norme",
+    "titolo": "Cinque per mille: nuovi modelli di rendicontazione (decreto direttoriale n. 257/2026)",
+    "sintesi": "Con il decreto direttoriale n. 257 del 15 ottobre 2026 il Ministero del Lavoro e delle politiche sociali aggiorna i modelli e le linee guida per la rendicontazione del contributo del 5 per mille dell'IRPEF. Gli enti che hanno percepito importi pari o superiori a 20.000 euro inviano il rendiconto e la relazione illustrativa tramite un'apposita piattaforma.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127962_rendicontazione_del_contributo_del_cinque_per_mille_con_nuova.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 181/2026: IVA al 10% esclusa per l'accumulatore di impianto fotovoltaico",
+    "sintesi": "Con la risposta a interpello n. 181, pubblicata il 15 ottobre 2026, l'Agenzia delle Entrate esclude l'aliquota IVA del 10% (nn. 127-quinquies e 127-sexies della Tabella A, parte III, DPR 633/1972) per la cessione con installazione di un sistema di accumulo destinato a un impianto fotovoltaico già operativo. Secondo l'Agenzia l'accumulatore immagazzina e non produce energia, è tecnicamente distinto dall'impianto di produzione e non ne costituisce un ampliamento.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127883_cessione_dell_accumulatore_per_l_impianto_fotovoltaico_senza_iva.aspx"
+  },
+  {
+    "data": "2026-10-15",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 185/2026: deducibilità IRES degli interessi da conciliazione e ravvedimento",
+    "sintesi": "Con la risposta a interpello n. 185/2026 l'Agenzia delle Entrate chiarisce che gli interessi corrisposti a seguito di conciliazione giudiziale hanno funzione compensativa e sono deducibili ai fini IRES secondo le regole generali, senza rientrare nell'art. 96 del TUIR. Gli interessi versati con il ravvedimento operoso hanno invece natura moratoria e sono indeducibili, seguendo il trattamento dell'imposta principale.",
+    "fonte": "FISCOeTASSE",
+    "url": "https://www.fiscoetasse.com/new-rassegna-stampa/4668-interessi-fiscali-quando-sono-deducibili-la-distinzione-tra-conciliazione-e-ravvedimento.html"
+  },
+  {
+    "data": "2026-10-14",
+    "tema": "Scadenze",
+    "titolo": "Iper-ammortamenti: dal 15 ottobre le comunicazioni di completamento al GSE",
+    "sintesi": "Con il decreto direttoriale del 14 ottobre 2026 il MIMIT ha avviato, dalle ore 12:00 del 15 ottobre 2026, la presentazione delle comunicazioni di completamento degli investimenti per gli iper-ammortamenti, in attuazione del DM 7 maggio 2026 e dell'art. 1, comma 427, della L. 199/2025. La comunicazione si invia esclusivamente tramite la piattaforma telematica del GSE, al completamento e all'interconnessione dei beni e comunque entro il 15 novembre 2028.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Art_1127929_al_via_le_comunicazioni_di_completamento_per_gli_iper_ammortamenti.aspx"
+  },
+  {
+    "data": "2026-10-14",
+    "tema": "Prassi",
+    "titolo": "Consulenza giuridica n. 10/2026: registro in misura fissa per l'esdebitazione",
+    "sintesi": "Con la consulenza giuridica n. 10/2026 l'Agenzia delle Entrate si pronuncia sul trattamento ai fini dell'imposta di registro del decreto di esdebitazione del sovraindebitato incapiente (art. 283 del D.Lgs. 14/2019). Il decreto è soggetto a imposta di registro in misura fissa ai sensi dell'art. 8, comma 1, lett. d), della Tariffa, Parte prima, del DPR 131/1986, poiché non comporta il trasferimento, la condanna o l'accertamento di diritti a contenuto patrimoniale.",
+    "fonte": "FISCOeTASSE",
+    "url": "https://www.fiscoetasse.com/new-rassegna-stampa/4660-esdebitazione-del-debitore-incapiente-imposta-di-registro-in-misura-fissa.html"
   }
 ]
