@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="it">
+<head>
+<script>window.IMP_ROOT="/"</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Calcolo IRPEF 2026 e simulatore forfettario · I&amp;M Partners</title>
+<meta name="description" content="Calcolatori online: IRPEF lorda 2026 con i nuovi scaglioni (23%, 33%, 43%) e simulatore dell'imposta sostitutiva del regime forfettario.">
+<link rel="canonical" href="https://studioiempartners.it/strumenti/">
+<meta name="theme-color" content="#13131d">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="I&amp;M Partners Commercialisti">
+<meta property="og:title" content="Calcolo IRPEF 2026 e simulatore forfettario · I&amp;M Partners">
+<meta property="og:description" content="Calcolatori online: IRPEF lorda 2026 con i nuovi scaglioni (23%, 33%, 43%) e simulatore dell'imposta sostitutiva del regime forfettario.">
+<meta property="og:url" content="https://studioiempartners.it/strumenti/">
+<meta property="og:image" content="https://studioiempartners.it/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="preload" href="/bodoni-moda-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/barlow-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/barlow-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://studioiempartners.it/"}, {"@type": "ListItem", "position": 2, "name": "Strumenti", "item": "https://studioiempartners.it/strumenti/"}]}</script><script src="/site.js" defer></script><script src="/strumenti.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/home.html" aria-label="I&amp;M Partners Commercialisti, pagina iniziale"><img src="/logo.png" alt="I&amp;M Partners Commercialisti" width="900" height="218"></a>
+    <nav class="nav" aria-label="Sezioni del sito"><a href="/studio.html">Lo studio</a><a href="/aree.html">Aree di attività</a><a href="/professionisti.html">Professionisti</a><a href="/scadenze.html">Scadenze e novità</a><a href="/strumenti.html" aria-current="page">Strumenti</a><a href="/contatti.html">Contatti</a></nav>
+    <a class="lang" href="/en.html" hreflang="en" aria-label="English version">EN</a>
+    <button class="menu-btn" id="menu-apri" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+<div class="ov" id="menu" hidden>
+  <div class="ov-top"><img src="/logo.png" alt="I&amp;M Partners Commercialisti" width="900" height="218"><button class="menu-btn" id="menu-chiudi" type="button">Chiudi</button></div>
+  <nav aria-label="Menu"><ol><li><a href="/home.html">Home</a></li><li><a href="/studio.html">Lo studio</a></li><li><a href="/aree.html">Aree di attività</a></li><li><a href="/professionisti.html">Professionisti</a></li><li><a href="/scadenze.html">Scadenze e novità</a></li><li><a href="/strumenti.html">Strumenti</a></li><li><a href="/contatti.html">Contatti</a></li><li><a href="/note-legali.html">Note legali e privacy</a></li><li><a href="/en.html" hreflang="en">English version</a></li></ol></nav>
+</div>
+<main id="contenuto">
+
+<section class="sec">
+  <div class="wrap ph">
+    <nav aria-label="Percorso"><ol class="crumbs"><li><a href="/home.html">Home</a></li><li aria-current="page">Strumenti</li></ol></nav>
+    <p class="label">Strumenti</p>
+    <h1>Fare due conti, <em>prima di decidere.</em></h1>
+    <p class="lead">Calcolatori per una prima stima. I valori inseriti restano nel tuo browser: non vengono inviati né conservati.</p>
+  </div>
+</section>
+
+<section class="sec" id="irpef">
+  <div class="wrap stack" style="gap:30px">
+    <div class="stack"><p class="label">Calcolo IRPEF 2026</p><h2>Imposta lorda <em>per scaglioni.</em></h2></div>
+    <div class="tool">
+      <form class="form" id="f-irpef" novalidate>
+        <label for="i-reddito">Reddito complessivo imponibile (€)</label>
+        <input id="i-reddito" type="number" inputmode="decimal" min="0" step="100" value="40000">
+        <p class="note" style="margin-top:18px">Reddito al netto degli oneri deducibili. Scaglioni dell'art. 11, co. 1, TUIR, come modificato dall'art. 1, co. 3, L. 30 dicembre 2025, n. 199 (23% fino a 28.000 €, 33% fino a 50.000 €, 43% oltre).</p>
+      </form>
+      <div class="res" aria-live="polite">
+        <div><p class="label">Imposta lorda</p><p class="big" id="i-out">–</p></div>
+        <p class="soft">Aliquota media <b id="i-media">–</b> · aliquota marginale <b id="i-marg">–</b></p>
+        <table class="tab"><thead><tr><th>Scaglione</th><th class="n">Aliquota</th><th class="n">Reddito</th><th class="n">Imposta</th></tr></thead><tbody id="i-tab"></tbody></table>
+        <p class="warn" id="i-200" hidden>Con reddito complessivo oltre 200.000 € alcune detrazioni sono ridotte di 440 € (art. 16-ter, co. 5-ter, TUIR, introdotto dall'art. 1, co. 4, L. 199/2025).</p>
+        <p class="note">Imposta lorda prima delle detrazioni per lavoro, carichi di famiglia e oneri (artt. 12-16 TUIR) e senza le addizionali regionale e comunale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="forfettario">
+  <div class="wrap stack" style="gap:30px">
+    <div class="stack"><p class="label">Simulatore regime forfettario</p><h2>Imposta sostitutiva <em>stimata.</em></h2></div>
+    <div class="tool">
+      <form class="form" id="f-forf" novalidate>
+        <label for="f-ricavi">Ricavi o compensi incassati nell'anno (€)</label>
+        <input id="f-ricavi" type="number" inputmode="decimal" min="0" step="100" value="40000">
+        <label for="f-gruppo">Attività e coefficiente di redditività</label>
+        <select id="f-gruppo"><option value="0.40">40% · Industrie alimentari e delle bevande · Commercio all'ingrosso e al dettaglio · Commercio ambulante di prodotti alimentari · Alloggio e ristorazione</option><option value="0.54">54% · Commercio ambulante di altri prodotti</option><option value="0.62">62% · Intermediari del commercio</option><option value="0.67">67% · Altre attività economiche</option><option value="0.78" selected>78% · Attività professionali, scientifiche, tecniche, sanitarie, di istruzione, servizi finanziari e assicurativi</option><option value="0.86">86% · Costruzioni e attività immobiliari</option></select>
+        <label for="f-contributi">Contributi previdenziali obbligatori versati nell'anno (€)</label>
+        <input id="f-contributi" type="number" inputmode="decimal" min="0" step="50" value="0">
+        <fieldset style="border:0;padding:0;margin:12px 0 0"><legend class="label" style="color:var(--mute);font-size:14px">Aliquota</legend>
+          <div class="radios">
+            <label><input type="radio" name="aliq" value="0.15" checked> 15% · aliquota ordinaria</label>
+            <label><input type="radio" name="aliq" value="0.05"> 5% · nuova attività, primi cinque anni, se ricorrono i requisiti del co. 65</label>
+          </div>
+        </fieldset>
+      </form>
+      <div class="res" aria-live="polite">
+        <div><p class="label">Imposta sostitutiva</p><p class="big" id="f-out">–</p></div>
+        <p class="soft">Incidenza sui ricavi <b id="f-carico">–</b></p>
+        <table class="tab"><tbody id="f-tab"></tbody></table>
+        <p class="warn" id="f-warn" hidden></p>
+        <p class="note">Coefficienti dell'allegato 4 alla L. 190/2014; contributi deducibili ai sensi del co. 64. La stima non comprende i contributi dovuti sul reddito, né verifica requisiti e cause di esclusione del regime (co. 54 e 57).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div class="stack"><p class="label">Link utili</p><h2>Siti <em>istituzionali.</em></h2></div>
+    <ul class="links"><li><a href="https://www.agenziaentrate.gov.it" target="_blank" rel="noopener">Agenzia delle Entrate <i>↗</i></a></li><li><a href="https://www.inps.it" target="_blank" rel="noopener">INPS <i>↗</i></a></li><li><a href="https://www.inail.it" target="_blank" rel="noopener">INAIL <i>↗</i></a></li><li><a href="https://www.registroimprese.it" target="_blank" rel="noopener">Registro delle imprese <i>↗</i></a></li><li><a href="https://www.adm.gov.it" target="_blank" rel="noopener">Agenzia delle Dogane e dei Monopoli <i>↗</i></a></li><li><a href="https://www.normattiva.it" target="_blank" rel="noopener">Normattiva <i>↗</i></a></li><li><a href="https://www.commercialisti.it" target="_blank" rel="noopener">Consiglio Nazionale dei Commercialisti <i>↗</i></a></li><li><a href="https://composizionenegoziata.camcom.it" target="_blank" rel="noopener">Composizione negoziata della crisi <i>↗</i></a></li></ul>
+  </div>
+</section>
+<section class="sec">
+  <div class="wrap"><p class="note">Le stime hanno valore orientativo e non costituiscono consulenza: il risultato dipende da elementi che il calcolatore non considera. Per una valutazione sul caso concreto, <a href="/contatti.html">contatta lo studio</a>.</p></div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="col">
+      <img class="fl" src="/logo.png" alt="I&amp;M Partners Commercialisti" width="900" height="218" loading="lazy">
+      <span>P. IVA 04942040611</span>
+      <span>Via Filippo Saporito 58, 81031 Aversa (CE)</span>
+      <span>Si riceve solo su appuntamento</span>
+    </div>
+    <div class="col">
+      <a href="mailto:studioiempartners@gmail.com">studioiempartners@gmail.com</a>
+      <a href="tel:+393317007176">+39 331 700 7176</a>
+      <a href="tel:+393318390268">+39 331 839 0268</a>
+    </div>
+    <nav class="col fnav" aria-label="Menu secondario">
+      <a href="/studio.html">Lo studio</a><a href="/aree.html">Aree di attività</a><a href="/professionisti.html">Professionisti</a><a href="/scadenze.html">Scadenze e novità</a><a href="/strumenti.html">Strumenti</a><a href="/contatti.html">Contatti</a>
+    </nav>
+    <div class="col">
+      <div class="ord"><img src="/ordine.png" alt="" width="160" height="162" loading="lazy"><span>Iscritti all'Ordine dei Dottori Commercialisti e degli Esperti Contabili di Napoli Nord</span></div>
+    </div>
+  </div>
+  <div class="fine">
+    <div class="wrap">
+      <span>© 2026 I&amp;M Partners</span>
+      <span><a href="/note-legali.html">Note legali e privacy</a> · <a href="/en.html" hreflang="en">English</a></span>
+    </div>
+  </div>
+</footer>
+<div class="dock"><a href="tel:+393317007176">Chiama</a><a class="alt" href="/contatti.html#scrivici">Scrivici</a></div>
+</body>
+</html>
