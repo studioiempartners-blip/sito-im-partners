@@ -114,7 +114,7 @@
   var box=document.getElementById('nov'),vuoto=document.getElementById('nov-vuoto'),mn=document.getElementById('mini-nov');
   if(!box&&!mn) return;
   function dataIt(s){var d=/^\d{4}-\d{2}-\d{2}$/.test(s||'')?s.split('-'):null;return d?(+d[2])+' '+MESI[+d[1]-1]+' '+d[0]:'';}
-  fetch((window.IMP_ROOT||'./')+'novita.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[]}).then(function(l){
+  fetch('/novita.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():[]}).then(function(l){
     l=(Array.isArray(l)?l:[]).filter(function(n){return n&&n.titolo}).sort(function(a,b){return String(b.data).localeCompare(String(a.data))}).slice(0,12);
     if(box){
       [].forEach.call(box.querySelectorAll('article'),function(a){a.remove()});
@@ -134,7 +134,7 @@
       l.slice(0,3).forEach(function(n){
         var li=el('li'),d=n.data&&n.data.split('-'),dd=el('span','d',d?String(+d[2]):'');
         dd.appendChild(el('small',null,d?MES[+d[1]-1]+' '+d[0]:''));
-        var a=el('a');a.href=(window.IMP_ROOT||'./')+'scadenze/index.html#novita';a.appendChild(el('h3',null,String(n.titolo)));a.appendChild(el('p',null,(n.tema||'')+(n.fonte?' · '+n.fonte:'')));
+        var a=el('a');a.href='/scadenze/#novita';a.appendChild(el('h3',null,String(n.titolo)));a.appendChild(el('p',null,(n.tema||'')+(n.fonte?' · '+n.fonte:'')));
         li.appendChild(dd);li.appendChild(a);mn.appendChild(li);
       });
     }

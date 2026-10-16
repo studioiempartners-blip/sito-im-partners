@@ -1,12 +1,12 @@
-@font-face{font-family:"Barlow";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/barlow-latin-300-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/barlow-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/barlow-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/barlow-condensed-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/barlow-condensed-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/barlow-condensed-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/bodoni-moda-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/bodoni-moda-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400;font-display:swap;src:url(../fonts/bodoni-moda-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/barlow-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/barlow-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/barlow-condensed-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/barlow-condensed-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/barlow-condensed-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/bodoni-moda-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/bodoni-moda-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Bodoni Moda";font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/bodoni-moda-latin-400-italic.woff2) format("woff2")}
 
 /* Layout: colonna editoriale allineata a sinistra su fondo inchiostro; un'unica "&" bodoniana come segno dello studio. Tema unico scuro, per scelta. */
 :root{
@@ -459,9 +459,35 @@ main > section:first-child,.page > section:first-child{padding-top:clamp(40px,7v
 .v-on body{overflow:hidden}
 
 /* parole lunghe nei titoli su schermi stretti */
-h1,h2,.hx{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+@media (max-width:520px){h1,h2,.hx{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}}
 
 /* griglie con numero dispari di elementi */
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:40px 48px}
 @media (min-width:900px){.cards > .card:last-child:nth-child(odd){grid-column:1 / -1}}
 .mini li{grid-template-columns:100px minmax(0,1fr)}
+
+/* immagini */
+figure{margin:0}
+.ph-img{position:relative;overflow:hidden;background:var(--ink-2)}
+.ph-img img,.ci img{display:block;width:100%;height:auto;filter:saturate(.8) contrast(1.02) brightness(.9)}
+.ph-img::after,.ci::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,19,29,0) 55%,rgba(19,19,29,.45));pointer-events:none}
+.banner{padding-block:0}
+.banner + .sec{border-top:0}
+.sec + .banner{border-top:0}
+.card.has-img{padding:0;overflow:hidden}
+.card.has-img .cb{display:flex;flex-direction:column;gap:16px;padding:clamp(22px,3vw,34px);flex:1}
+.ci{position:relative;overflow:hidden;aspect-ratio:3/2;background:var(--ink-2)}
+.ci img{height:100%;object-fit:cover;transition:transform .8s ease,filter .4s}
+.card.has-img:hover .ci img{transform:scale(1.04);filter:saturate(1) brightness(.95)}
+.band.photo{position:relative;overflow:hidden;isolation:isolate;padding-block:clamp(90px,14vw,190px)}
+.band.photo img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.75) brightness(.8)}
+.band.photo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(19,19,29,.92) 0%,rgba(19,19,29,.7) 45%,rgba(19,19,29,.25) 100%)}
+@media (prefers-reduced-motion:reduce){.ci img{transition:none}}
+@media (min-width:900px){
+  .cards > .card.has-img:last-child:nth-child(odd){flex-direction:row}
+  .cards > .card.has-img:last-child:nth-child(odd) .ci{flex:0 0 50%;aspect-ratio:auto}
+}
+.banner:has(+ .band){padding-bottom:clamp(48px,7vw,96px)}
+.closing-split{align-items:center}
+.closing-split .closing{gap:26px}
+.closing-split .ph-img img{aspect-ratio:4/3;object-fit:cover}

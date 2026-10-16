@@ -4,7 +4,7 @@
 
   /* vecchi indirizzi con # della versione a pagina unica */
   var old={'#studio':'/studio/','#servizi':'/aree/','#professionisti':'/professionisti/','#scadenze':'/scadenze/','#contatti':'/contatti/','#note-legali':'/note-legali/'};
-  if(false){location.replace(old[location.hash]);return;}
+  if(location.pathname==='/'&&old[location.hash]){location.replace(old[location.hash]);return;}
 
   /* vetrina d'ingresso: solo in home, una volta per sessione del browser */
   var v=doc.getElementById('vetrina'), entra=doc.getElementById('entra');
@@ -74,9 +74,25 @@
       if(!f.checkValidity()) return;
       e.preventDefault();
       btn.disabled=true;dici('Invio in corso…');
-      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
-        .then(function(r){if(!r.ok) throw r;location.href=(window.IMP_ROOT||'./')+'grazie/index.html';})
-        .catch(function(){btn.disabled=false;dici('Il messaggio non è stato inviato. Riprova tra poco oppure scrivi a studioiempartners@gmail.com.');});
+      var dati={};new FormData(f).forEach(function(v,k){dati[k]=v;});
+      if(dati.botcheck){location.href='/grazie/';return;}
+      delete dati.botcheck;delete dati.redirect;
+      if(dati.email) dati.replyto=dati.email;
+      fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(dati)})
+        .then(function(r){return r.json().then(function(j){if(!r.ok||!j.success) throw j;location.href='/grazie/';});})
+        .catch(function(){
+          /* invio online non riuscito: si apre il programma di posta con il messaggio già scritto */
+          btn.disabled=false;
+          var v=function(n){var el=f.elements[n];return el?String(el.value||'').trim():'';};
+          var arg=f.elements.argomento,argT=arg&&arg.selectedIndex>0?arg.options[arg.selectedIndex].text:'';
+          var corpo=v('messaggio')+'\n\n'+v('nome')+'\n'+v('email')+(v('telefono')?'\n'+v('telefono'):'');
+          var href='mailto:studioiempartners@gmail.com?subject='+encodeURIComponent('Richiesta dal sito'+(argT?' · '+argT:''))+'&body='+encodeURIComponent(corpo);
+          st.hidden=false;st.textContent='';
+          st.appendChild(doc.createTextNode('L’invio dal sito non è riuscito. Puoi spedire lo stesso messaggio con il tuo programma di posta: '));
+          var a=doc.createElement('a');a.href=href;a.textContent='apri l’e-mail già compilata';st.appendChild(a);
+          st.appendChild(doc.createTextNode(', oppure scrivi a studioiempartners@gmail.com.'));
+          location.href=href;
+        });
     });
   }
 })();
