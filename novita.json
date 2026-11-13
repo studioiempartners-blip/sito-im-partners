@@ -1,5 +1,21 @@
 [
   {
+    "data": "2026-11-12",
+    "tema": "Lavoro e previdenza",
+    "titolo": "INPS, messaggio n. 3691/2026: modalità di pagamento dei contributi per il lavoro domestico",
+    "sintesi": "Con il messaggio n. 3691 del 12 novembre 2026 l'INPS richiama le modalità di versamento dei contributi per i lavoratori domestici, ricordando che i modelli di pagamento pagoPA sono disponibili esclusivamente online nel Portale dei Pagamenti, sezione «Lavoratori Domestici». Il servizio di emissione massiva degli avvisi pagoPA è riservato ai professionisti abilitati e alle associazioni sindacali dei datori di lavoro domestico che gestiscono almeno 200 rapporti di lavoro a trimestre.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1131354"
+  },
+  {
+    "data": "2026-11-11",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 212/2026: fuori campo IVA la tariffa comunale per i veicoli fuori uso",
+    "sintesi": "Con la risposta a interpello n. 212 dell'11 novembre 2026 l'Agenzia delle Entrate esamina la tariffa applicata da un consorzio di comuni per il rilascio dell'attestazione di inutilizzabilità dei veicoli fuori uso destinati alla demolizione. L'Agenzia ritiene che il rilascio costituisca esercizio di pubblica autorità e che la tariffa sia esclusa dal campo di applicazione dell'IVA per difetto del presupposto soggettivo.",
+    "fonte": "Fisco Oggi",
+    "url": "https://www.fiscooggi.it/portale/-/attestazione-veicoli-fuori-uso-tariffe-comunali-fuori-campo-iva"
+  },
+  {
     "data": "2026-11-11",
     "tema": "Prassi",
     "titolo": "Interpello n. 211/2026: IVA ridotta sull'auto per il figlio disabile anche se cointestata",
@@ -58,14 +74,6 @@
   {
     "data": "2026-11-05",
     "tema": "Prassi",
-    "titolo": "Interpello n. 200/2026: prima casa, riacquisto all'estero prima della vendita",
-    "sintesi": "Con la risposta a interpello n. 200 del 5 novembre 2026 l'Agenzia delle Entrate esamina il caso di un contribuente che, dopo aver acquistato in Italia un'abitazione con le agevolazioni «prima casa», ha acquistato un'abitazione all'estero prima di rivendere l'immobile italiano entro cinque anni. L'Agenzia esclude la decadenza dall'agevolazione a condizione che l'abitazione estera sia adibita ad abitazione principale entro due anni dal suo acquisto.",
-    "fonte": "Agenzia delle Entrate",
-    "url": "https://www.agenziaentrate.gov.it/portale/documents/d/guest/risposta-n-200_2026-del-5-novembre-2026"
-  },
-  {
-    "data": "2026-11-05",
-    "tema": "Prassi",
     "titolo": "Provvedimento del 5 novembre 2026: servizio online per aprire la partita IVA dei professionisti",
     "sintesi": "Con provvedimento del 5 novembre 2026 l'Agenzia delle Entrate istituisce un servizio nell'area riservata del sito che consente alle persone fisiche che iniziano un'attività artistica o professionale di presentare la dichiarazione di inizio attività con contestuale attribuzione della partita IVA. Il servizio sarà utilizzabile dalla data che verrà comunicata con apposito avviso sul sito dell'Agenzia, mentre resta disponibile la presentazione del modello AA9/12 con le modalità ordinarie.",
     "fonte": "Eutekne.info",
@@ -86,13 +94,5 @@
     "sintesi": "Con la risposta a interpello n. 202 del 5 novembre 2026 l'Agenzia delle Entrate esamina il caso di un ex dipendente pubblico residente in Libano, con doppia cittadinanza italiana e libanese, titolare di una pensione erogata dall'INPS per l'attività prestata presso un Ministero italiano. In applicazione della Convenzione contro le doppie imposizioni tra Italia e Libano, l'Agenzia conclude che la pensione pubblica resta imponibile esclusivamente in Italia.",
     "fonte": "Eutekne.info",
     "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130518"
-  },
-  {
-    "data": "2026-11-04",
-    "tema": "Prassi",
-    "titolo": "Risoluzione n. 42/2026: vendita con riserva di proprietà, trascrizione e voltura",
-    "sintesi": "Con la risoluzione n. 42/E del 4 novembre 2026 l'Agenzia delle Entrate chiarisce gli adempimenti di pubblicità immobiliare e di voltura catastale per le compravendite con riserva di proprietà di cui agli artt. 1523 e seguenti del codice civile: il contratto va trascritto fin dalla stipula, indicando nella nota la natura di «compravendita con riserva di proprietà», e la voltura catastale va eseguita dopo la stipula e la registrazione, senza attendere il pagamento dell'ultima rata. L'integrale pagamento del prezzo, che determina il trasferimento della proprietà, è reso pubblico mediante annotazione nei registri immobiliari dell'atto che ne attesta il versamento.",
-    "fonte": "Fisco Oggi",
-    "url": "https://www.fiscooggi.it/portale/-/vendita-con-riserva-della-propriet%C3%A0-nuovi-chiarimenti-su-pubblicit%C3%A0-e-voltura"
   }
 ]
