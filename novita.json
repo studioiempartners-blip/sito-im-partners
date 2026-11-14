@@ -1,5 +1,29 @@
 [
   {
+    "data": "2026-11-13",
+    "tema": "Prassi",
+    "titolo": "Risoluzione n. 45/2026: codice tributo 4095 per la sostitutiva sui crediti d'imposta",
+    "sintesi": "Con la risoluzione n. 45/E del 13 novembre 2026 l'Agenzia delle Entrate istituisce il codice tributo 4095 per il versamento tramite modello F24 dell'imposta sostitutiva sui differenziali positivi derivanti dalla cessione o dalla compensazione di crediti d'imposta agevolativi, prevista dall'art. 54, comma 3-quinquies, del TUIR. L'imposta sostitutiva, pari al 26%, si applica al guadagno realizzato e non all'intero importo del credito.",
+    "fonte": "Eutekne.info",
+    "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1131565"
+  },
+  {
+    "data": "2026-11-12",
+    "tema": "Prassi",
+    "titolo": "Interpello n. 213/2026: rimborsi spese analitici esclusi dai compensi dei forfetari",
+    "sintesi": "Con la risposta a interpello n. 213/2026 l'Agenzia delle Entrate esamina il trattamento dei rimborsi analitici delle spese di viaggio, vitto e alloggio sostenute da un professionista in regime forfetario per l'esecuzione dell'incarico e riaddebitate al committente. Per le spese sostenute dal 1° gennaio 2025, se adeguatamente documentate e pagate con mezzi tracciabili, i rimborsi non concorrono a formare i compensi né rilevano ai fini delle soglie di accesso e permanenza nel regime.",
+    "fonte": "Agenzia delle Entrate",
+    "url": "https://www.agenziaentrate.gov.it/portale/documents/20143/10443592/Risposta+n.+213_2026/122966db-5f26-4998-7c5e-8c5fafda7b5f"
+  },
+  {
+    "data": "2026-11-12",
+    "tema": "Lavoro e previdenza",
+    "titolo": "INPS, messaggio n. 3694/2026: chiarimenti sull'accesso all'APE sociale",
+    "sintesi": "Con il messaggio n. 3694 del 12 novembre 2026 l'INPS, sentito il Ministero del Lavoro, chiarisce che sono esclusi dall'APE sociale i lavoratori con primo accredito contributivo successivo al 31 dicembre 1995. Per i lavoratori domestici, la cessazione del rapporto per decesso del datore di lavoro è equiparata al licenziamento per giustificato motivo oggettivo ai fini dell'accesso all'APE sociale e alla pensione anticipata per i lavoratori precoci.",
+    "fonte": "IPSOA",
+    "url": "https://www.ipsoa.it/documents/quotidiano/2026/11/13/ape-sociale-decesso-datore-lavoro-domestico"
+  },
+  {
     "data": "2026-11-12",
     "tema": "Lavoro e previdenza",
     "titolo": "INPS, messaggio n. 3691/2026: modalità di pagamento dei contributi per il lavoro domestico",
@@ -25,14 +49,6 @@
   },
   {
     "data": "2026-11-10",
-    "tema": "Lavoro e previdenza",
-    "titolo": "INPS, messaggio n. 3649/2026: somma non imponibile su NASpI e integrazioni salariali",
-    "sintesi": "Con il messaggio n. 3649 del 10 novembre 2026 l'INPS fornisce indicazioni sulla somma non imponibile riconosciuta sulle prestazioni non pensionistiche sostitutive dei redditi di lavoro dipendente e soggette a tassazione ordinaria, tra cui NASpI, disoccupazione agricola e trattamenti di integrazione salariale, per i titolari di reddito complessivo annuo non superiore a 20.000 euro. Per il 2026 i pagamenti sono effettuati a partire da novembre e comprendono gli importi spettanti dal 1° gennaio 2026.",
-    "fonte": "INPS",
-    "url": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.somma-non-imponibile-sulle-prestazioni-non-pensionistiche-indicazioni.html"
-  },
-  {
-    "data": "2026-11-10",
     "tema": "Prassi",
     "titolo": "Risoluzione n. 43/2026: codici tributo per il ravvedimento speciale del CPB 2026-2027",
     "sintesi": "Con la risoluzione n. 43/E del 10 novembre 2026 l'Agenzia delle Entrate istituisce i codici tributo 4092 (persone fisiche), 4093 (soggetti diversi dalle persone fisiche) e 4094 (IRAP) per il versamento tramite modello F24 delle imposte sostitutive dovute per il ravvedimento speciale riservato ai soggetti ISA che rinnovano l'adesione al concordato preventivo biennale per il biennio 2026-2027. I codici 4092 e 4093 vanno esposti nella sezione «Erario» e il codice 4094 nella sezione «Regioni», mentre gli interessi in caso di pagamento rateale si versano con i codici già esistenti 1668 e 3805.",
@@ -46,6 +62,14 @@
     "sintesi": "Con la risposta a interpello n. 208 del 10 novembre 2026 l'Agenzia delle Entrate esamina il trasferimento di un immobile dal figlio al padre previsto negli accordi patrimoniali recepiti nella sentenza di cessazione degli effetti civili del matrimonio. L'Agenzia riconosce l'esenzione dell'art. 19 della legge 74/1987 agli atti funzionalmente collegati allo scioglimento del matrimonio, anche se non stipulati contestualmente agli altri.",
     "fonte": "Eutekne.info",
     "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130869"
+  },
+  {
+    "data": "2026-11-10",
+    "tema": "Lavoro e previdenza",
+    "titolo": "INPS, messaggio n. 3649/2026: somma non imponibile su NASpI e integrazioni salariali",
+    "sintesi": "Con il messaggio n. 3649 del 10 novembre 2026 l'INPS fornisce indicazioni sulla somma non imponibile riconosciuta sulle prestazioni non pensionistiche sostitutive dei redditi di lavoro dipendente e soggette a tassazione ordinaria, tra cui NASpI, disoccupazione agricola e trattamenti di integrazione salariale, per i titolari di reddito complessivo annuo non superiore a 20.000 euro. Per il 2026 i pagamenti sono effettuati a partire da novembre e comprendono gli importi spettanti dal 1° gennaio 2026.",
+    "fonte": "INPS",
+    "url": "https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2026.11.somma-non-imponibile-sulle-prestazioni-non-pensionistiche-indicazioni.html"
   },
   {
     "data": "2026-11-10",
@@ -70,29 +94,5 @@
     "sintesi": "Il 10 novembre 2026 scade il termine entro cui CAF, professionisti abilitati e sostituti d'imposta possono accedere, tramite l'area riservata del sito dell'Agenzia delle Entrate, ai modelli 730/2026 precompilati relativi al periodo d'imposta 2025. L'accesso avviene con richiesta massiva tramite file oppure con la consultazione dei documenti del singolo contribuente via web.",
     "fonte": "Eutekne.info",
     "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130487"
-  },
-  {
-    "data": "2026-11-05",
-    "tema": "Prassi",
-    "titolo": "Provvedimento del 5 novembre 2026: servizio online per aprire la partita IVA dei professionisti",
-    "sintesi": "Con provvedimento del 5 novembre 2026 l'Agenzia delle Entrate istituisce un servizio nell'area riservata del sito che consente alle persone fisiche che iniziano un'attività artistica o professionale di presentare la dichiarazione di inizio attività con contestuale attribuzione della partita IVA. Il servizio sarà utilizzabile dalla data che verrà comunicata con apposito avviso sul sito dell'Agenzia, mentre resta disponibile la presentazione del modello AA9/12 con le modalità ordinarie.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130603"
-  },
-  {
-    "data": "2026-11-05",
-    "tema": "Prassi",
-    "titolo": "Interpello n. 201/2026: cessione di società estera con immobile in Italia da parte di un trust",
-    "sintesi": "Con la risposta a interpello n. 201 del 5 novembre 2026 l'Agenzia delle Entrate esamina la cessione, da parte di un trust estero, della partecipazione totalitaria in una società estera il cui unico patrimonio è un'abitazione situata in Italia. L'Agenzia esclude che la società possa considerarsi soggetto interposto e qualifica la plusvalenza come reddito diverso di natura finanziaria, imponibile in Italia ai sensi dell'art. 23, comma 1-bis, del TUIR.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130529"
-  },
-  {
-    "data": "2026-11-05",
-    "tema": "Prassi",
-    "titolo": "Interpello n. 202/2026: pensione pubblica INPS tassata in Italia per il residente in Libano",
-    "sintesi": "Con la risposta a interpello n. 202 del 5 novembre 2026 l'Agenzia delle Entrate esamina il caso di un ex dipendente pubblico residente in Libano, con doppia cittadinanza italiana e libanese, titolare di una pensione erogata dall'INPS per l'attività prestata presso un Ministero italiano. In applicazione della Convenzione contro le doppie imposizioni tra Italia e Libano, l'Agenzia conclude che la pensione pubblica resta imponibile esclusivamente in Italia.",
-    "fonte": "Eutekne.info",
-    "url": "https://www.eutekne.info/Sezioni/Articolo.aspx?ID=1130518"
   }
 ]
